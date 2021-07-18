@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Template.Domain.Entities
 {
-    class User
+    public class User
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public string Email { get; set; }
     }
 }
