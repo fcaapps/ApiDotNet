@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Template.Application.Interfaces;
+using Template.Application.ViewModels;
 
 namespace Template.Controllers
 {
@@ -25,6 +27,30 @@ namespace Template.Controllers
         public IActionResult Get()
         {
             return Ok(this.userService.Get());
+        }
+
+        [HttpPost]
+        public IActionResult Post(UserViewModel userViewModel) 
+        {
+            return Ok(this.userService.Post(userViewModel));
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(string id)
+        {
+            return Ok(this.userService.GetById(id));
+        }
+
+        [HttpPut]
+        public IActionResult Put(UserViewModel userViewModel)
+        {
+            return Ok(this.userService.Put(userViewModel));
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(string id)
+        {
+            return Ok(this.userService.Delete(id));
         }
     }
 }
