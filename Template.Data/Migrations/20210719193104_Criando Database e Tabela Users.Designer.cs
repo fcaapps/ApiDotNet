@@ -10,8 +10,8 @@ using Template.Data.Content;
 namespace Template.Data.Migrations
 {
     [DbContext(typeof(TemplateContext))]
-    [Migration("20210718150249_Update Default User")]
-    partial class UpdateDefaultUser
+    [Migration("20210719193104_Criando Database e Tabela Users")]
+    partial class CriandoDatabaseeTabelaUsers
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,9 @@ namespace Template.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2021, 7, 19, 16, 31, 3, 691, DateTimeKind.Local).AddTicks(7270));
 
                     b.Property<DateTime>("DateUpdated")
                         .HasColumnType("datetime2");
@@ -37,7 +39,9 @@ namespace Template.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Name")
                         .IsRequired()

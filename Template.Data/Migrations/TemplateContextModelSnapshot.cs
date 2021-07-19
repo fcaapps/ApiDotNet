@@ -28,7 +28,7 @@ namespace Template.Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 18, 18, 54, 27, 232, DateTimeKind.Local).AddTicks(7468));
+                        .HasDefaultValue(new DateTime(2021, 7, 19, 16, 31, 3, 691, DateTimeKind.Local).AddTicks(7270));
 
                     b.Property<DateTime>("DateUpdated")
                         .HasColumnType("datetime2");
