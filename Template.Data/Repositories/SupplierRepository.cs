@@ -8,13 +8,13 @@ using Template.Domain.Entities;
 
 namespace Template.Data.Repositories
 {
-    public class UserRepository : Repository<User>, IUserRepository
+    public class SupplierRepository : Repository<Supplier>, ISupplierRepository
     {
 
-        public UserRepository(TemplateContext context)
+        public SupplierRepository(TemplateContext context)
             : base(context) { }
 
-        public IEnumerable<User> GetAll()
+        public IEnumerable<Supplier> GetAll()
         {
             return Query(x => !x.IsDeleted);
         }

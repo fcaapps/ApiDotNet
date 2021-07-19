@@ -13,10 +13,12 @@ namespace Template.IoC
 
             #region Services    
                 services.AddScoped<IUserService, UserService>();
+                services.AddScoped<ISupplierService, SupplierService>();
             #endregion
 
             #region Repositories
-                services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ISupplierRepository, SupplierRepository>();
             #endregion
 
 

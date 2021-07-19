@@ -6,7 +6,7 @@ using Template.Data.Extensions;
 using Template.Data.Mappings;
 using Template.Domain.Entities;
 
-namespace Template.Data.Content
+namespace Template.Data.Context
 {
     public class TemplateContext : DbContext
     {
@@ -15,6 +15,7 @@ namespace Template.Data.Content
 
         #region "DbSets"
         public DbSet<User> Users { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

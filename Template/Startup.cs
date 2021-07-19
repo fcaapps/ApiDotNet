@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Template.Application.AutoMapper;
-using Template.Data.Content;
+using Template.Data.Context;
 using Template.IoC;
 using Template.Swagger;
 
