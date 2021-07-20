@@ -10,7 +10,7 @@ Documentação ApiDotNet
 
 Links
 
-- Documentação: https://../documentacao/index.html
+- Documentação da API: https://../documentacao/index.html
 - Apis: 
   - https://../apis/users
   - https://../apis/supplier
