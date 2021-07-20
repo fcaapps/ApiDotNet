@@ -6,4 +6,12 @@ Documentação ApiDotNet
 - Utilização de Entity Framework
 - Realização de Migrations para alimentar o banco de dados SQL SERVER
 - Validação através de FluentValidation
+- Documentação através do Swagger através do link: https://../documentacao/index.html
+
+Links
+
+- Documentação: https://../documentacao/index.html
+- Apis: 
+  - https://../apis/users
+  - https://../apis/supplier
 
