@@ -14,13 +14,13 @@ namespace Template.Swagger
             {
                 opt.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Template .Net Core",
+                    Title = "ApiDotNet 1.0",
                     Version = "v1",
-                    Description = "Tutorial de desenvolvimento com .Net Core e Angular.",
+                    Description = "Documentação APIDOTNET.",
                     Contact = new OpenApiContact
                     {
-                        Name = "Nicolas Fontes",
-                        Email = "nicolas.rfontes@gmail.com"
+                        Name = "Fernando Castro",
+                        Email = "fca.apps@gmail.com"
                     }
                 });
 
@@ -33,7 +33,7 @@ namespace Template.Swagger
         {
             return app.UseSwagger().UseSwaggerUI(c =>
             {
-                c.RoutePrefix = "documentation";
+                c.RoutePrefix = "documentacao";
                 c.SwaggerEndpoint("../swagger/v1/swagger.json", "API v1");
             });
         }

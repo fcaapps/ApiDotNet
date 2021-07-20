@@ -10,6 +10,8 @@ using Template.Application.AutoMapper;
 using Template.Data.Context;
 using Template.IoC;
 using Template.Swagger;
+using FluentValidation.AspNetCore;
+using Template.Domain.Validator;
 
 namespace Template
 {
@@ -22,10 +24,25 @@ namespace Template
 
         public IConfiguration Configuration { get; }
 
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //services.AddControllersWithViews()
+            //.AddFluentValidation(p => p.RegisterValidatorsFromAssemblyContaining<SupplierValidator>());                        
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsApi",
+                    builder => builder.WithOrigins("http://localhost:8080", "http://mywebsite.com")
+                .AllowAnyHeader()
+                .AllowAnyMethod());
+            });
+
+            services.AddControllers()
+                .AddFluentValidation(p => p.RegisterValidatorsFromAssemblyContaining<SupplierValidator>());
 
             services.AddDbContext<TemplateContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("TemplateDB")).EnableSensitiveDataLogging());
             NativeInjector.RegisterServices(services);
@@ -64,6 +81,8 @@ namespace Template
             }
 
             app.UseRouting();
+
+            app.UseCors("CorsApi");
 
             app.UseEndpoints(endpoints =>
             {

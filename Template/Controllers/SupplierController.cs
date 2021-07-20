@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,9 +8,12 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Template.Application.Interfaces;
 using Template.Application.ViewModels;
+using Template.Domain.Entities;
+using Template.Domain.Validator;
 
 namespace Template.Controllers
 {
+    [EnableCors("CorsApi")]
     [Route("api/[controller]")]
     [ApiController]
     public class SupplierController : ControllerBase
@@ -32,6 +36,7 @@ namespace Template.Controllers
         [HttpPost]
         public IActionResult Post(SupplierViewModel supplierViewModel)
         {
+            
             return Ok(this.supplierService.Post(supplierViewModel));
         }
 

@@ -14,12 +14,13 @@ namespace Template.Application.AutoMapper
             #region ViewModelToDomain
 
             CreateMap<UserViewModel, User>();
+            CreateMap<SupplierViewModel, Supplier>();
 
             #endregion
 
             #region DomainToViewModel
 
-            CreateMap<User, UserViewModel>();
+            CreateMap<Supplier, SupplierViewModel>();
 
             #endregion
         }

@@ -13,6 +13,8 @@ namespace Template.Data.Mappings
         {
             builder.Property(x => x.Id).IsRequired();
             builder.Property(x => x.RazaoSocial).HasMaxLength(100).IsRequired();
+            builder.Property(x => x.NomeFantasia).HasMaxLength(100).IsRequired();            
+
         }
     }
 }

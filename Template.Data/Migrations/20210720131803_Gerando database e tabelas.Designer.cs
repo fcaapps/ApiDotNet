@@ -10,8 +10,8 @@ using Template.Data.Context;
 namespace Template.Data.Migrations
 {
     [DbContext(typeof(TemplateContext))]
-    [Migration("20210719205446_Gerar Database e Criar Tabelas")]
-    partial class GerarDatabaseeCriarTabelas
+    [Migration("20210720131803_Gerando database e tabelas")]
+    partial class Gerandodatabaseetabelas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,7 +42,7 @@ namespace Template.Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 19, 17, 54, 45, 466, DateTimeKind.Local).AddTicks(9733));
+                        .HasDefaultValue(new DateTime(2021, 7, 20, 10, 18, 2, 727, DateTimeKind.Local).AddTicks(3116));
 
                     b.Property<DateTime>("DateUpdated")
                         .HasColumnType("datetime2");
@@ -78,7 +78,7 @@ namespace Template.Data.Migrations
                     b.Property<DateTime>("DateCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 19, 17, 54, 45, 472, DateTimeKind.Local).AddTicks(8543));
+                        .HasDefaultValue(new DateTime(2021, 7, 20, 10, 18, 2, 732, DateTimeKind.Local).AddTicks(3215));
 
                     b.Property<DateTime>("DateUpdated")
                         .HasColumnType("datetime2");

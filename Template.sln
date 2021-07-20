@@ -28,7 +28,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Data", "Template.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.IoC", "Template.IoC\Template.IoC.csproj", "{913DB372-5405-4124-AAF8-AEDA1F351335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Swagger", "Template.Swagger\Template.Swagger.csproj", "{9062355E-FC89-4606-9D3A-67F7E18E24D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Swagger", "Template.Swagger\Template.Swagger.csproj", "{9062355E-FC89-4606-9D3A-67F7E18E24D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

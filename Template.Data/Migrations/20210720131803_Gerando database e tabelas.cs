@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Template.Data.Migrations
 {
-    public partial class GerarDatabaseeCriarTabelas : Migration
+    public partial class Gerandodatabaseetabelas : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace Template.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    DateCreated = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2021, 7, 19, 17, 54, 45, 466, DateTimeKind.Local).AddTicks(9733)),
+                    DateCreated = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2021, 7, 20, 10, 18, 2, 727, DateTimeKind.Local).AddTicks(3116)),
                     DateUpdated = table.Column<DateTime>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false, defaultValue: false),
                     RazaoSocial = table.Column<string>(nullable: true),
@@ -34,7 +34,7 @@ namespace Template.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    DateCreated = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2021, 7, 19, 17, 54, 45, 472, DateTimeKind.Local).AddTicks(8543)),
+                    DateCreated = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2021, 7, 20, 10, 18, 2, 732, DateTimeKind.Local).AddTicks(3215)),
                     DateUpdated = table.Column<DateTime>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false, defaultValue: false),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
