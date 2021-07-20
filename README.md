@@ -5,4 +5,5 @@ Documentação ApiDotNet
 - Utilização de AUTOMAPPER
 - Utilização de Entity Framework
 - Realização de Migrations para alimentar o banco de dados SQL SERVER
+- Validação através de FluentValidation
 
